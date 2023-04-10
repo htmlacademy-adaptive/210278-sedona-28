@@ -1,0 +1,346 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
+  font-display: swap;
+}
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+.advantage {
+  background-color: #81b3d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 33px;
+  padding-bottom: 40px;
+}
+.advantage_grey {
+  background-color: #eeeeee;
+}
+.advantage__title {
+  font-size: 18px;
+  line-height: 26px;
+}
+.advantage__text {
+  text-align: center;
+  color: #333333;
+}
+@media (min-width: 768px) {
+  .advantage {
+    width: 256px;
+  }
+}
+@media (min-width: 1200px) {
+  .advantage {
+    width: 400px;
+  }
+}
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .advantages {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .advantages__promo {
+    display: flex;
+    width: 100%;
+  }
+  .advantages__block {
+    display: flex;
+  }
+}
+.button {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.form {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.form__item {
+  border: none;
+  margin-top: 24px;
+  margin-bottom: 34px;
+  padding: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+.form__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+}
+.form__label {
+  color: #333333;
+}
+.form__label_bold {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: none;
+  color: #000000;
+}
+.form__input_bold {
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  font-weight: 700;
+}
+.form__input_contacts {
+  color: rgba(0, 0, 0, 0.3);
+}
+.form__comment {
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.6);
+}
+@media (min-width: 768px) {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .form__item {
+    width: 100%;
+  }
+  .form__item_user,
+  .form__item_contacts {
+    width: 50%;
+  }
+}
+.advantages-service,
+.advantages-service__block {
+  display: flex;
+  flex-direction: column;
+}
+.advantages-service {
+  padding-bottom: 60px;
+}
+.advantages-service__block {
+  padding-left: 60px;
+}
+.advantages-service__title {
+  margin-top: 33px;
+  margin-bottom: 16px;
+}
+.advantages-service__descript {
+  color: #333333;
+  width: 237px;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .advantages-service {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .advantages-service__block {
+    width: 256px;
+    padding-left: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .advantages-service__block {
+    width: 400px;
+  }
+}
+.catalog {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.catalog__items {
+  display: flex;
+  flex-direction: column;
+}
+.catalog__items:last-child {
+  border-bottom: 1px solid #e5e5e5;
+}
+.catalog__item {
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-top: 1px solid #e5e5e5;
+}
+.catalog__title {
+  font-weight: 700;
+}
+.catalog__author {
+  font-size: 14px;
+  text-transform: none;
+  color: #333333;
+}
+.catalog__likes-amount {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .catalog {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .catalog__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .catalog__item {
+    width: 324px;
+  }
+  .catalog__item:first-child {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .catalog__item {
+    width: 400px;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+.footer__hashtag {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .footer__wrapper {
+    flex-direction: row;
+  }
+}
+.navigation {
+  background-color: #81b3d2;
+}
+.navigation__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation__list {
+  text-align: center;
+}
+.navigation__link {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-decoration: none;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .navigation__items {
+    display: flex;
+  }
+}
+.promo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 32px;
+}
+.promo__title,
+.promo__descript {
+  text-align: center;
+  line-height: 26px;
+  margin: 0;
+}
+.promo__title {
+  font-size: 18px;
+  max-width: 284px;
+  align-self: center;
+}
+.promo__descript {
+  color: #333333;
+}
+@media (min-width: 768px) {
+  .promo {
+    width: 100%;
+  }
+}
+.search-hotel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 38px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 49px;
+}
+.search-hotel__title,
+.search-hotel__text {
+  text-align: center;
+}
+.search-hotel__title {
+  font-size: 21px;
+  line-height: 26px;
+}
+.search-hotel__text {
+  color: #333333;
+}
+.video {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.welcome {
+  background-color: #81b3d2;
+  width: 100%;
+  background-image: url("../img/background_sedona.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.welcome__img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.white-text {
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */
