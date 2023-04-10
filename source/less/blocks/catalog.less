@@ -33,3 +33,29 @@
 .catalog__likes-amount {
   font-weight: 700;
 }
+
+@media (min-width: 768px) {
+  .catalog {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .catalog__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    width: 324px;
+  }
+
+  .catalog__item:first-child {
+      width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .catalog__item {
+    width: 400px;
+  }
+}
