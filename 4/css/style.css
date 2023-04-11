@@ -297,11 +297,6 @@ body {
 .promo__descript {
   color: #333333;
 }
-@media (min-width: 768px) {
-  .promo {
-    width: 100%;
-  }
-}
 .search-hotel {
   display: flex;
   flex-direction: column;
