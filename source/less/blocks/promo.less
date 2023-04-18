@@ -2,9 +2,15 @@
   display: flex;
   flex-direction: column;
   padding-top: 32px;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 25px;
+  padding-left: 25px;
   padding-bottom: 32px;
+
+  &_catalog,
+  &_form {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .promo__title,
@@ -18,8 +24,24 @@
   font-size: 18px;
   max-width: 284px;
   align-self: center;
+  margin-bottom: 35px;
 }
 
 .promo__descript {
   color: #333333;
+}
+
+@media (min-width: 768px) {
+  .promo {
+    width: 100%;
+  }
+
+  .promo__title {
+    max-width: 375px;
+  }
+
+  .promo__descript {
+    width: 435px;
+    align-self: center;
+  }
 }
