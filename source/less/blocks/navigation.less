@@ -2,18 +2,17 @@
   position: relative;
 }
 
-.navigation__items_opened>.navigation__list {
+.navigation__items_opened > .navigation__list {
   display: flex;
 }
 
-.navigation__items_closed>.navigation__list {
+.navigation__items_closed > .navigation__list {
   display: none;
   border: none;
   background-color: #ffffff;
-
 }
 
-.navigation__items_opened>.navigation__list_logo {
+.navigation__items_opened > .navigation__list_logo {
   display: none;
 }
 
@@ -28,14 +27,14 @@
   display: block;
   width: 55px;
   height: 55px;
-  background: url(../img/icon-cross.svg) no-repeat 50% 50%;
+  background: url("../img/icon-cross.svg") no-repeat 50% 50%;
   background-size: 22px 22px;
   border: none;
   outline: none;
   cursor: pointer;
 
   &_closed {
-    background: url(../img/icon-menu.svg) no-repeat 50% 50%;
+    background: url("../img/icon-menu.svg") no-repeat 50% 50%;
     background-size: 23px 22px;
   }
 }
@@ -75,7 +74,7 @@
     background-color: #ffffff;
   }
 
-  .navigation>.navigation__items>.navigation__list_logo {
+  .navigation>.navigation__items > .navigation__list_logo {
     display: block;
   }
 

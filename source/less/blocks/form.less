@@ -47,7 +47,6 @@
   }
 
   &_radio {
-
     &::before {
       content: "";
       position: absolute;
@@ -60,10 +59,44 @@
       height: 16px;
       cursor: pointer;
     }
+
+    &_tel,
+    &_email {
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        position: absolute;
+        top: 42px;
+        right: 21px;
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #e6e6e6;
+        top: 21px;
+        right: 0;
+        width: 58px;
+        height: 58px;
+      }
+    }
+
+    &_tel {
+      &::before {
+        content: url("../img/phone-icon.svg");
+      }
+    }
+
+    &_email {
+      &::before {
+        content: url("../img/mail-icon.svg");
+      }
+    }
   }
 
   &_checkbox {
-
     &::before {
       content: "";
       position: absolute;
@@ -79,17 +112,17 @@
   }
 }
 
-input.form__input-radio[type=radio],
-input.form__input-checkbox[type=checkbox] {
+input.form__input-radio[type="radio"],
+input.form__input-checkbox[type="checkbox"] {
   display: none;
 }
 
-input.form__input-radio[type=radio]:checked+.form__label_radio::before {
+input.form__input-radio[type="radio"]:checked+.form__label_radio::before {
   background-color: #000000;
 }
 
-input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
-  content: url(../img/tick-icon.svg);
+input.form__input-checkbox[type="checkbox"]:checked+.form__label_checkbox::before {
+  content: url("../img/tick-icon.svg");
   font-size: 8px;
 }
 
@@ -102,7 +135,7 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
     height: 58px;
     padding-left: 16px;
     border: none;
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
   }
 
   &_contacts {
@@ -113,7 +146,7 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
   }
 
   &_review {
-    font-family: "PT Sans Bold",Arial,sans-serif;
+    font-family: "PT Sans Bold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -127,46 +160,6 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
     padding: 15px;
     outline: none;
     resize: none;
-  }
-}
-
-.form__label {
-
-  &_tel,
-  &_email {
-    position: relative;
-    z-index: 1;
-
-    &::before {
-      position: absolute;
-      top: 42px;
-      right: 21px;
-      z-index: 1;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-color: #E6E6E6;
-      top: 21px;
-      right: 0;
-      width: 58px;
-      height: 58px;
-    }
-  }
-
-  &_tel {
-
-    &::before {
-      content: url(../img/phone-icon.svg);
-    }
-  }
-
-  &_email {
-
-    &::before {
-      content: url(../img/mail-icon.svg);
-    }
   }
 }
 
@@ -239,7 +232,6 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
   }
 
   .form__input {
-
     &_review {
       width: 100%;
       height: 180px;
@@ -260,14 +252,12 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
   }
 
   .form__line {
-
     &_checkbox {
       width: 47%;
     }
   }
 
   .form__title {
-
     &_checkbox {
       width: 308px;
     }
@@ -279,8 +269,8 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
     padding-right: 120px;
     padding-left: 120px;
   }
-  .form__item {
 
+  .form__item {
     &_user,
     &_contacts {
       width: 430px;
@@ -307,7 +297,6 @@ input.form__input-checkbox[type=checkbox]:checked+.form__label_checkbox:before {
   }
 
   .form__line {
-
     &_checkbox {
       width: auto;
     }
