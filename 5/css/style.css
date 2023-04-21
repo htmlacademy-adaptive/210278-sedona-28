@@ -20,7 +20,7 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #e7e5e5;
   min-width: 320px;
   margin: 0;
   padding: 0;
@@ -39,6 +39,8 @@ body {
   overflow: hidden;
 }
 .container {
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   width: 320px;
   margin: 0 auto;
 }
@@ -97,9 +99,12 @@ body {
   .advantage_grey {
     padding: 41px 33px;
   }
+  .advantage_position {
+    order: 2;
+  }
   .advantage__title {
+    font-size: 21px;
     text-align: center;
-    width: 135px;
   }
   .advantage__border .advantage__title::before {
     display: none;
@@ -166,12 +171,37 @@ body {
   flex-direction: column;
 }
 .form__item {
+  position: relative;
   border: none;
   margin-top: 24px;
   margin-bottom: 34px;
   padding: 0;
   margin-right: 0;
   margin-left: 0;
+}
+.form__item_border::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -55px;
+  right: -20px;
+  height: 1px;
+  width: 320px;
+  background: #dbdbdb;
+  z-index: 3;
+}
+.form__item_border-visit {
+  position: relative;
+}
+.form__item_border-visit::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: -79px;
+  right: -20px;
+  height: 1px;
+  width: 320px;
+  background: #dbdbdb;
 }
 .form__title {
   font-size: 18px;
@@ -234,7 +264,7 @@ body {
 .form__label_email::before {
   content: url("../img/mail-icon.svg");
 }
-_checkbox::before {
+.form__label_checkbox::before {
   content: "";
   position: absolute;
   left: -5px;
@@ -274,10 +304,10 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   padding-bottom: 0;
 }
 .form__input_review {
-  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  font-weight: 400;
+  font-weight: 700;
   color: #000000;
   border: none;
   background-color: #f2f2f2;
@@ -311,17 +341,31 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .form__item {
     width: 100%;
   }
+  .form__item_border::before {
+    display: none;
+  }
   .form__item_radio > .form__title,
   .form__item_checkbox > .form__title {
     margin-bottom: 38px;
   }
   .form__item_user,
   .form__item_contacts {
-    width: 259px;
+    width: 295px;
   }
   .form__item_user {
-    margin-right: 130px;
+    position: relative;
+    margin-right: 58px;
     margin-bottom: 60px;
+  }
+  .form__item_user::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -10%;
+    right: -33px;
+    width: 1px;
+    height: 407px;
+    background: #dbdbdb;
   }
   .form__item_radio,
   .form__item_checkbox {
@@ -331,12 +375,77 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
     margin: 0 auto;
   }
   .form__item_radio {
+    position: relative;
     width: 575px;
     margin-bottom: 58px;
   }
+  .form__item_radio::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -50px;
+    right: -36px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
+  }
+  .form__item_radio::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -50px;
+    left: -36px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
+  }
   .form__item_checkbox {
+    position: relative;
     width: 480px;
     margin-bottom: 38px;
+  }
+  .form__item_checkbox::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -66px;
+    right: -84px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
+  }
+  .form__item_checkbox::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -66px;
+    left: -84px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
+  }
+  .form__item_review {
+    position: relative;
+  }
+  .form__item_review::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -41px;
+    right: 1px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
+  }
+  .form__item_review::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: -41px;
+    left: 1px;
+    width: 123px;
+    height: 1px;
+    background: #dbdbdb;
   }
   .form__item_review > .form__title {
     margin-bottom: 28px;
@@ -362,6 +471,9 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .form__line_checkbox {
     width: 47%;
   }
+  .form__title {
+    font-size: 21px;
+  }
   .form__title_checkbox {
     width: 308px;
   }
@@ -378,14 +490,42 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .form__item_user {
     margin-right: 91px;
   }
+  .form__item_user::after {
+    right: -50px;
+    height: 393px;
+  }
   .form__item_radio,
   .form__item_checkbox {
     width: 960px;
     justify-content: space-around;
   }
+  .form__item_radio::before {
+    right: 0;
+    width: 280px;
+  }
+  .form__item_radio::after {
+    left: 0;
+    width: 280px;
+  }
+  .form__item_checkbox::before {
+    right: -2px;
+    width: 280px;
+  }
+  .form__item_checkbox::after {
+    left: -2px;
+    width: 280px;
+  }
   .form__item_review {
     width: 768px;
     margin: 0 auto;
+  }
+  .form__item_review::before {
+    right: -98px;
+    width: 280px;
+  }
+  .form__item_review::after {
+    left: -98px;
+    width: 280px;
   }
   .form__item_radio > .form__line:nth-of-type(even) {
     transform: none;
@@ -427,6 +567,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   content: url("../img/icon-gift.svg");
 }
 .advantages-service__title {
+  font-size: 21px;
   margin-top: 33px;
   margin-bottom: 16px;
 }
@@ -451,7 +592,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .advantages-service__block::before {
     width: 70px;
     top: 40px;
-    left: 87px;
+    left: 92px;
   }
   .advantages-service__block_souvenir-icon::before {
     content: url("../img/icon-gift.svg");
@@ -467,7 +608,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
     width: 400px;
   }
   .advantages-service__block::before {
-    left: 161px;
+    left: 165px;
   }
   .advantages-service__descript {
     width: 290px;
@@ -492,6 +633,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   border-top: 1px solid #e5e5e5;
 }
 .catalog__title {
+  font-size: 14px;
   font-weight: 700;
   margin-top: 15px;
   margin-bottom: 5px;
@@ -503,24 +645,21 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   margin-top: 0;
   margin-bottom: 16px;
 }
-.catalog__likes-amount {
-  position: relative;
-  font-weight: 700;
-  padding-left: 33px;
+.catalog__likes {
+  display: flex;
+  align-items: baseline;
 }
-.catalog__likes-amount::before {
-  content: "";
-  position: absolute;
-  background-image: url("../img/like-icon.svg");
-  top: -6px;
-  left: 0;
-  width: 23px;
-  height: 21px;
+.catalog__lokes-img {
+  opacity: 0.3;
+}
+.catalog__likes-amount {
+  font-weight: 700;
+  padding-left: 10px;
 }
 @media (min-width: 768px) {
   .catalog {
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 60px;
+    padding-left: 60px;
   }
   .catalog__wrapper {
     display: flex;
@@ -534,6 +673,9 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .catalog__items {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .catalog__items:last-child {
+    border: none;
   }
   .catalog__item {
     padding-top: 0;
@@ -549,6 +691,10 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   }
 }
 @media (min-width: 1200px) {
+  .catalog {
+    padding-right: 0;
+    padding-left: 0;
+  }
   .catalog__item {
     position: relative;
     width: 400px;
@@ -568,6 +714,10 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   }
   .catalog__likes {
     padding-right: 20px;
+  }
+  .catalog__lokes-img {
+    opacity: 1;
+    fill: #ffffff;
   }
   .catalog__author {
     color: #ffffff;
@@ -675,6 +825,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   }
   .navigation > .navigation__items > .navigation__list_logo {
     display: block;
+    z-index: 2;
   }
   .navigation__items {
     display: flex;
@@ -740,15 +891,27 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   color: #333333;
 }
 @media (min-width: 768px) {
-  .promo {
+  .promo_catalog {
+    width: 661px;
+  }
+  .promo_index {
     width: 100%;
   }
   .promo__title {
+    font-size: 30px;
     max-width: 375px;
+  }
+  .promo__title_index {
+    font-size: 21px;
   }
   .promo__descript {
     width: 435px;
     align-self: center;
+  }
+}
+@media (min-width: 1200px) {
+  .promo_catalog {
+    width: 100%;
   }
 }
 .search-hotel {
@@ -778,6 +941,9 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .search-hotel__line {
     display: block;
   }
+  .search-hotel__title {
+    font-size: 30px;
+  }
 }
 .video {
   position: relative;
@@ -795,7 +961,14 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   left: 143px;
   cursor: pointer;
 }
+@media (min-width: 768px) {
+  .video {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
 .welcome {
+  position: relative;
   background-color: #81b3d2;
   width: 100%;
   background-image: url("../img/background_sedona.jpg");
@@ -803,11 +976,56 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   background-repeat: no-repeat;
   background-size: cover;
 }
+.welcome::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 145px;
+  background-image: url("../img/intro-triangle.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 358px 30px;
+  background-position-x: -16px;
+}
+.welcome::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: -248px;
+  left: 0;
+  height: 145px;
+  background-image: url("../img/white-copy.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 352px 49px;
+  background-position-x: -16px;
+  z-index: 1;
+}
 .welcome__img {
   display: block;
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+@media (min-width: 768px) {
+  .welcome::before {
+    background-size: 778px 49px;
+    background-position-x: -5px;
+  }
+  .welcome::after {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .welcome::before {
+    background-image: url("../img/intro-triangle-desktop.svg");
+    background-size: 1200px 49px;
+    background-position-x: 0;
+  }
 }
 .white-text {
   color: #ffffff;
