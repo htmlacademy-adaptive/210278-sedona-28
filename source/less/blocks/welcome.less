@@ -1,10 +1,42 @@
 .welcome {
+  position: relative;
   background-color: #81b3d2;
   width: 100%;
   background-image: url("../img/background_sedona.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    height: 145px;
+    background-image: url("../img/intro-triangle.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 358px 30px;
+    background-position-x: -16px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: -248px;
+    left: 0px;
+    height: 145px;
+    background-image: url("../img/white-copy.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 352px 49px;
+    background-position-x: -16px;
+    z-index: 1;
+  }
 }
 
 .welcome__img {
@@ -12,4 +44,27 @@
   margin: 0 auto;
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    &::before {
+      background-size: 778px 49px;
+      background-position-x: -5px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome {
+    &::before {
+      background-image: url("../img/intro-triangle-desktop.svg");
+      background-size: 1200px 49px;
+      background-position-x: 0px;
+    }
+  }
 }

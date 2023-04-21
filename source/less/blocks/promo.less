@@ -33,15 +33,36 @@
 
 @media (min-width: 768px) {
   .promo {
-    width: 100%;
+
+    &_catalog {
+      width: 661px;
+    }
+
+    &_index {
+      width: 100%;
+    }
   }
 
   .promo__title {
+    font-size: 30px;
     max-width: 375px;
+
+    &_index {
+      font-size: 21px;
+    }
   }
 
   .promo__descript {
     width: 435px;
     align-self: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo {
+
+    &_catalog {
+      width: 100%;
+    }
   }
 }

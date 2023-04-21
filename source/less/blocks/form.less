@@ -14,12 +14,41 @@
 }
 
 .form__item {
+  position: relative;
   border: none;
   margin-top: 24px;
   margin-bottom: 34px;
   padding: 0;
   margin-right: 0;
   margin-left: 0;
+
+  &_border {
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -55px;
+      right: -20px;
+      height: 1px;
+      width: 320px;
+      background: #dbdbdb;
+      z-index: 3;
+    }
+  }
+
+  &_border-visit {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -79px;
+      right: -20px;
+      height: 1px;
+      width: 320px;
+      background: #dbdbdb;
+    }
+  }
 }
 
 .form__title {
@@ -95,20 +124,20 @@
       content: url("../img/mail-icon.svg");
     }
   }
-}
 
-&_checkbox {
-  &::before {
-    content: "";
-    position: absolute;
-    left: -5px;
-    bottom: -12px;
-    background-color: #f2f2f2;
-    border: 17px solid #f2f2f2;
-    border-radius: 4px;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
+  &_checkbox {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      bottom: -12px;
+      background-color: #f2f2f2;
+      border: 17px solid #f2f2f2;
+      border-radius: 4px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
   }
 }
 
@@ -146,10 +175,10 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   }
 
   &_review {
-    font-family: "PT Sans Bold", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 26px;
-    font-weight: 400;
+    font-weight: 700;
     color: #000000;
     border: none;
     background-color: #f2f2f2;
@@ -189,6 +218,12 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   .form__item {
     width: 100%;
 
+    &_border {
+      &::before {
+        display: none;
+      }
+    }
+
     &_radio > .form__title,
     &_checkbox > .form__title {
       margin-bottom: 38px;
@@ -196,12 +231,24 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
 
     &_user,
     &_contacts {
-      width: 259px;
+      width: 295px;
     }
 
     &_user {
-      margin-right: 130px;
+      position: relative;
+      margin-right: 58px;
       margin-bottom: 60px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -10%;
+        right: -33px;
+        width: 1px;
+        height: 407px;
+        background: #dbdbdb;
+      }
     }
 
     &_radio,
@@ -213,13 +260,85 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
     }
 
     &_radio {
+      position: relative;
       width: 575px;
       margin-bottom: 58px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -50px;
+        right: -36px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -50px;
+        left: -36px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
     }
 
     &_checkbox {
+      position: relative;
       width: 480px;
       margin-bottom: 38px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -66px;
+        right: -84px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -66px;
+        left: -84px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
+    }
+
+    &_review {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -41px;
+        right: 1px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        top: -41px;
+        left: 1px;
+        width: 123px;
+        height: 1px;
+        background: #dbdbdb;
+      }
     }
 
     &_review > .form__title {
@@ -258,6 +377,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
   }
 
   .form__title {
+    font-size: 21px;
     &_checkbox {
       width: 308px;
     }
@@ -278,6 +398,11 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
 
     &_user {
       margin-right: 91px;
+
+      &::after {
+        right: -50px;
+        height: 393px;
+      }
     }
 
     &_radio,
@@ -286,9 +411,43 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
       justify-content: space-around;
     }
 
+    &_radio {
+      &::before {
+        right: 0px;
+        width: 280px;
+      }
+
+      &::after {
+        left: 0px;
+        width: 280px;
+      }
+    }
+
+    &_checkbox {
+      &::before {
+        right: -2px;
+        width: 280px;
+      }
+
+      &::after {
+        left: -2px;
+        width: 280px;
+      }
+    }
+
     &_review {
       width: 768px;
       margin: 0 auto;
+
+      &::before {
+        right: -98px;
+        width: 280px;
+      }
+
+      &::after {
+        left: -98px;
+        width: 280px;
+      }
     }
   }
 
