@@ -9,17 +9,44 @@
 }
 
 .advantages-service__block {
+  position: relative;
   padding-left: 60px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    top: 27px;
+    left: 11px;
+  }
+
+  &_house-icon {
+    &::before {
+      content: url("../img/icon-house.svg");
+    }
+  }
+
+  &_food-icon {
+    &::before {
+      content: url("../img/icon-burger.svg");
+    }
+  }
+
+  &_souvenir-icon {
+    &::before {
+      content: url("../img/icon-gift.svg");
+    }
+  }
 }
 
 .advantages-service__title {
+  font-size: 21px;
   margin-top: 33px;
   margin-bottom: 16px;
 }
 
 .advantages-service__descript {
   color: #333333;
-  width: 237px;
   margin: 0;
 }
 
@@ -31,13 +58,43 @@
   }
 
   .advantages-service__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 256px;
+    padding-top: 98px;
     padding-left: 0;
+
+    &::before {
+      width: 70px;
+      top: 40px;
+      left: 92px;
+    }
+
+    &_souvenir-icon {
+      &::before {
+        content: url("../img/icon-gift.svg");
+        top: 20px;
+      }
+    }
+  }
+
+  .advantages-service__descript {
+    text-align: center;
+    width: 190px;
   }
 }
 
 @media (min-width: 1200px) {
   .advantages-service__block {
     width: 400px;
+
+    &::before {
+      left: 165px;
+    }
+  }
+
+  .advantages-service__descript {
+    width: 290px;
   }
 }

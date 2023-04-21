@@ -11,10 +11,32 @@
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.footer__block {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 12.5px;
 }
 
 @media (min-width: 768px) {
   .footer__wrapper {
     flex-direction: row;
+    justify-content: space-around;
+
+    &_form {
+      padding-bottom: 50px;
+    }
+  }
+
+  .footer__hashtag {
+    margin-bottom: 0;
   }
 }

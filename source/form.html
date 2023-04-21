@@ -9,11 +9,9 @@
   <body>
     <div class="container">
       <header>
-        <a href="index.html" class="logo">
-          <img src="#" width="185" height="96" alt="Логотип сайта Седона">
-        </a>
         <nav class="navigation">
-          <ul class="navigation__items">
+          <button class="navigation__button" type="button"></button>
+          <ul class="navigation__items navigation__items_opened">
             <li class="navigation__list">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
@@ -26,6 +24,11 @@
             <li class="navigation__list">
               <a href="https://htmlacademy.ru" class="navigation__link">HTML Academy</a>
             </li>
+            <li class="navigation__list navigation__list_logo">
+              <a href="index.html" class="navigation__link navigation__link_logo">
+                <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта Седона">
+              </a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -33,73 +36,73 @@
         <div class="welcome">
           <img class="welcome__img" src="img/sedona_header.svg" alt="Седона">
         </div>
-        <div class="promo">
+        <div class="promo promo_form">
           <h1 class="promo__title">Оставьте свой отзыв</h1>
           <p class="promo__descript">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <section class="review">
           <form class="form">
-            <fieldset class="form__item form__item_user">
+            <fieldset class="form__item form__item_border form__item_user">
               <legend class="form__title">Представьтесь:</legend>
-              <p class="form__line">
-                <label class="form__label" for="name">Имя*:</label>
+              <p class="form__line form__line_info">
+                <label class="form__label form__label_info" for="name">Имя*:</label>
                 <input class="form__input form__input_bold" type="text" id="name" name="user-name" placeholder="Петр">
               </p>
-              <p class="form__line">
-                <label class="form__label" for="family-name">Фамилия*:</label>
+              <p class="form__line form__line_info">
+                <label class="form__label form__label_info" for="family-name">Фамилия*:</label>
                 <input class="form__input form__input_bold" type="text" id="family-name" name="user-family-name" placeholder="Пустота">
               </p>
-              <p class="form__line">
-                <label class="form__label" for="surname">Отчество*:</label>
+              <p class="form__line form__line_info">
+                <label class="form__label form__label_info" for="surname">Отчество*:</label>
                 <input class="form__input form__input_bold" type="text" id="surname" name="user-surname" placeholder="Викторович">
               </p>
             </fieldset>
-            <fieldset class="form__item form__item_contacts">
+            <fieldset class="form__item form__item_border form__item_contacts">
               <legend class="form__title">Контактная информация:</legend>
-              <p class="form__line">
-                <label class="form__label" for="phone">Контактный телефон*:</label>
+              <p class="form__line form__line_info">
+                <label class="form__label form__label_info form__label_tel" for="phone">Контактный телефон*:</label>
                 <input class="form__input form__input_bold form__input_contacts" type="tel" id="phone" name="tel" placeholder="Введите телефон">
               </p>
-              <p class="form__line">
-                <label class="form__label" for="email">Электронная почта*:</label>
+              <p class="form__line form__line_info">
+                <label class="form__label form__label_info form__label_email" for="email">Электронная почта*:</label>
                 <input class="form__input form__input_bold form__input_contacts" type="email" id="email" name="email" placeholder="Введите e-mail">
               </p>
             </fieldset>
-            <fieldset class="form__item form__item_click">
+            <fieldset class="form__item form__item_border form__item_click form__item_radio">
               <legend class="form__title">Ваше общее впечатление:</legend>
               <p class="form__line">
                 <input class="form__input-radio" type="radio" id="positive" name="impress" value="positive-impress" checked>
-                <label class="form__label form__label_bold" for="positive">Скорее положительное</label>
+                <label class="form__label form__label_bold form__label_radio" for="positive">Скорее положительное</label>
               </p>
               <p class="form__line">
                 <input class="form__input-radio" type="radio" id="negative" name="impress" value="negative-impress">
-                <label class="form__label form__label_bold" for="negative">Скорее отрицательное</label>
+                <label class="form__label form__label_bold form__label_radio" for="negative">Скорее отрицательное</label>
               </p>
               <p class="form__line">
                 <input class="form__input-radio" type="radio" id="difficult" name="impress" value="difficult-impress">
-                <label class="form__label form__label_bold" for="difficult">Затрудняюсь ответить</label>
+                <label class="form__label form__label_bold form__label_radio" for="difficult">Затрудняюсь ответить</label>
               </p>
             </fieldset>
-            <fieldset class="form__item form__item_click">
-              <legend class="form__title">Посещенные достопримечательности:</legend>
-              <p class="form__line">
+            <fieldset class="form__item form__item_border-visit form__item_click form__item_checkbox">
+              <legend class="form__title form__title_checkbox">Посещенные достопримечательности:</legend>
+              <p class="form__line form__line_checkbox">
                 <input class="form__input-checkbox" type="checkbox" id="bridge" name="bridge" checked>
-                <label class="form__label form__label_bold" for="bridge">Мост Дьявола</label>
+                <label class="form__label form__label_bold form__label_checkbox" for="bridge">Мост Дьявола</label>
               </p>
-              <p class="form__line">
+              <p class="form__line form__line_checkbox">
                 <input class="form__input-checkbox" type="checkbox" id="mount" name="mount" checked>
-                <label class="form__label form__label_bold" for="mount">Гора-Колокол</label>
+                <label class="form__label form__label_bold form__label_checkbox" for="mount">Гора-Колокол</label>
               </p>
-              <p class="form__line">
+              <p class="form__line form__line_checkbox">
                 <input class="form__input-checkbox" type="checkbox" id="park" name="park" checked>
-                <label class="form__label form__label_bold" for="park">Слайд-парк</label>
+                <label class="form__label form__label_bold form__label_checkbox" for="park">Слайд-парк</label>
               </p>
-              <p class="form__line">
+              <p class="form__line form__line_checkbox">
                 <input class="form__input-checkbox" type="checkbox" id="rocks" name="rocks">
-                <label class="form__label form__label_bold" for="rocks">Красные скалы</label>
+                <label class="form__label form__label_bold form__label_checkbox" for="rocks">Красные скалы</label>
               </p>
             </fieldset>
-            <fieldset class="form__item form__item_review">
+            <fieldset class="form__item form__item_border form__item_review">
               <legend class="form__title">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="review"></label>
               <textarea class="form__input form__input_review" id="review" name="text-review" placeholder="Опишите подробно все свои восторги"></textarea>
@@ -112,22 +115,38 @@
         </section>
       </main>
       <footer class="footer">
-        <div class="footer__wrapper">
+        <div class="footer__wrapper footer__wrapper_form">
           <p class="footer__hashtag">#visitsedona</p>
           <ul class="socials">
             <li class="socials__icon">
-              <a class="socials__icon-link" href="#" aria-label="Вконтакте"></a>
+              <a class="socials__icon-link" href="#" aria-label="Вконтакте">
+                <svg class="socials__icon-logo" xmlns="http://www.w3.org/2000/svg" width="24" height="14" fill="none">
+                  <path fill="#fff" fill-rule="evenodd" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15 0 0 .35 0 .73c0 .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z" clip-rule="evenodd"/>
+                </svg>
+              </a>
             </li>
             <li class="socials__icon">
-              <a class="socials__icon-link" href="#" aria-label="Телеграм"></a>
+              <a class="socials__icon-link" href="#" aria-label="Телеграм">
+                <svg class="socials__icon-logo" xmlns="http://www.w3.org/2000/svg" width="22" height="18" fill="none">
+                  <path fill="#fff" d="m21.44 1.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L6.01 10.32 1.26 8.82C.22 8.5.21 7.8 1.48 7.3L20.1.11c.87-.32 1.62.2 1.34 1.51Z"/>
+                </svg>
+              </a>
             </li>
             <li class="socials__icon">
-              <a class="socials__icon-link" href="#" aria-label="Ютуб"></a>
+              <a class="socials__icon-link" href="#" aria-label="Ютуб">
+                <svg class="socials__icon-logo" xmlns="http://www.w3.org/2000/svg" width="20" height="14" fill="none">
+                  <path fill="#fff" d="M17.18 0H2.81C1.31 0 0 1.3 0 2.8v8.3C0 12.7 1.3 14 2.81 14h14.37A2.8 2.8 0 0 0 20 11.2V2.8c.1-1.5-1.2-2.8-2.8-2.8ZM7.03 10.4V3.6L13.87 7l-6.84 3.4Z"/>
+                </svg>
+              </a>
             </li>
           </ul>
           <div class="footer__block">
             <p class="footer__copyright">Разработано</p>
-            <a href="https://htmlacademy.ru" class="footer__copyright-link" aria-label="html academy"></a>
+            <a href="https://htmlacademy.ru" class="footer__copyright-link" aria-label="html academy">
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="35" fill="none">
+                <path fill="#000" d="M13.65.45h-.1L.05 1.85v24.7l13.5 8 13.4-8V1.85L13.65.45Zm11.4 12.1-11.5-6.8v-.1h-.1l-.1-.1v.1l-11.4 6.9v-9l11.5-1.2 11.6 1.2v9Zm-11.6-5.3 11.5 6.7-4.5 2.6-7.1-4.2v1.4l5.9 3.5-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9 1.1-1.8 1.1-11.4-6.7 11.4-6.8Zm-11.5 8.3 11.4 6.8v1l-7.9-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8 4.8 8.1-4.9v-5.2l3.4-2v10l-11.5 6.9-11.5-6.8v-9.9Z"/>
+              </svg>
+            </a>
           </div>
         </div>
       </footer>
