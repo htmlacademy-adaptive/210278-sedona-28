@@ -38,6 +38,7 @@
 
   &_border-visit {
     position: relative;
+
     &::before {
       position: absolute;
       content: "";
@@ -378,6 +379,7 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
 
   .form__title {
     font-size: 21px;
+
     &_checkbox {
       width: 308px;
     }
@@ -413,12 +415,12 @@ input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::bef
 
     &_radio {
       &::before {
-        right: 0px;
+        right: 0;
         width: 280px;
       }
 
       &::after {
-        left: 0px;
+        left: 0;
         width: 280px;
       }
     }
