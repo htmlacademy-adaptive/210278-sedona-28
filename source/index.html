@@ -5,6 +5,8 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_32.png">
   </head>
   <body>
     <div class="container">
@@ -26,14 +28,14 @@
             </li>
             <li class="navigation__list navigation__list_logo">
               <a href="#" class="navigation__link navigation__link_logo">
-                <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта Седона">
+                <img src="img/logo.svg" srcset="img/logo@2x.svg 2x" width="185" height="96" alt="Логотип сайта Седона">
               </a>
             </li>
           </ul>
         </nav>
       </header>
       <main>
-        <div class="welcome">
+        <div class="welcome welcome_index">
           <img class="welcome__img" src="img/welcome_sedona.svg" alt="Добро пожаловать в Седону">
         </div>
         <section class="advantages">
@@ -48,7 +50,11 @@
               <p class="advantage__text white-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
             </div>
             <div class="advantages__image">
-              <img src="img/photo-city@1x.jpg" width="320" height="260" class="advantages__photo" alt="Фото Седоны">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-city-1-desktop@1x.jpg 1x, img/photo-city-1-desktop@2x.jpg 2x" width="800" height="260">
+                <source media="(min-width:768px)" srcset="img/photo-city-1-tablet@1x.jpg 1x, img/photo-city-1-tablet@2x.jpg 2x" width="512" height="260">
+                <img src="img/photo-city-1-mobile@1x.jpg" srcset="img/photo-city-1-mobile@2x.jpg 2x" width="320" height="260" class="advantages__photo" alt="Фото Седоны">
+              </picture>
             </div>
           </div>
           <div class="advantages-service">
@@ -72,7 +78,11 @@
               <p class="advantage__text white-text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <div class="advantages__image">
-              <img src="img/photo-bridge@1x.jpg" width="320" height="260" class="advantages__photo" alt="Фото Седоны">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x" width="800" height="260">
+                <source media="(min-width:768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x" width="512" height="260">
+                <img src="img/photo-bridge@1x.jpg" srcset="img/photo-bridge@2x.jpg 2x" width="320" height="260" class="advantages__photo" alt="Фото Седоны">
+              </picture>
             </div>
           </div>
           <div class="advantages__block">
@@ -101,7 +111,11 @@
           <a href="#" class="button button_search">Найти гостиницу</a>
         </section>
         <section class="map">
-          <img src="img/map-mobile.jpg" width="320" height="350" alt="Карта расположения Седоны">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x" width="1200" height="350">
+            <source media="(min-width:768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x" width="768" height="350">
+            <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="350" alt="Карта расположения Седоны">
+          </picture>
         </section>
       </main>
       <footer class="footer">
