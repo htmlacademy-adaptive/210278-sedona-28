@@ -5,6 +5,8 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_32.png">
   </head>
   <body>
     <div class="container">
@@ -26,7 +28,7 @@
             </li>
             <li class="navigation__list navigation__list_logo">
               <a href="index.html" class="navigation__link navigation__link_logo">
-                <img src="img/logo.svg" width="185" height="96" alt="Логотип сайта Седона">
+                <img src="img/logo.svg" srcset="img/logo@2x.svg 2x" width="185" height="96" alt="Логотип сайта Седона">
               </a>
             </li>
           </ul>
@@ -43,7 +45,11 @@
           </div>
           <div class="catalog__items">
             <a class="catalog__item">
-              <img src="img/photo-1-mobile.jpg" width="280" height="280" alt="Фото достопримечательностей">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x" width="1200" height="400">
+                <source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x" width="648" height="400">
+                <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
+              </picture>
               <div class="catalog__wrapper">
                 <div class="catalog__info">
                   <h3 class="catalog__title">Народные просторы</h3>
@@ -56,7 +62,11 @@
               </div>
             </a>
             <a class="catalog__item">
-              <img src="img/photo-2-mobile.jpg" width="280" height="280" alt="Фото достопримечательностей">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x" width="400" height="267">
+                <source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x" width="324" height="267">
+                <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" alt="Фото достопримечательностей">
+              </picture>
               <div class="catalog__wrapper">
                 <div class="catalog__info">
                   <h3 class="catalog__title">Местная растительность</h3>
@@ -69,8 +79,12 @@
               </div>
             </a>
             <a class="catalog__item">
-              <img src="img/photo-3-mobile.jpg" width="280" height="280" alt="Фото достопримечательностей">
-              <div class="catalog__wrapper">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x" width="400" height="267">
+                <source media="(min-width:768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x" width="324" height="267">
+                <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
+              </picture>
+              <div class="catalog__wrapper catalog__wrapper_color">
                 <div class="catalog__info">
                   <h3 class="catalog__title">Дорога на север</h3>
                   <p class="catalog__author">Автор фото: <span>Петр</span></p>
@@ -82,7 +96,11 @@
               </div>
             </a>
             <a class="catalog__item">
-              <img src="img/photo-4-mobile.jpg" width="280" height="280" alt="Фото достопримечательностей">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x" width="400" height="267">
+                <source media="(min-width:768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x" width="324" height="267">
+                <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
+              </picture>
               <div class="catalog__wrapper">
                 <div class="catalog__info">
                   <h3 class="catalog__title">Мост дьявола</h3>
@@ -102,7 +120,11 @@
             <p class="promo__descript">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </div>
           <div class="video">
-            <img class="video__image" src="img/video-mobile.jpg" width="280" height="177" alt="Видео Седоны">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" width="800" height="500">
+              <source media="(min-width:768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x" width="648" height="500">
+              <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео Седоны">
+            </picture>
             <button class="video__play" type="button"><span class="visually-hidden">Включить видео</span></button>
           </div>
         </section>

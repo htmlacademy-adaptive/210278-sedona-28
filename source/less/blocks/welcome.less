@@ -56,6 +56,21 @@
     &::after {
       display: none;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background_sedona@2x.jpg");
+      height: 290px;
+    }
+
+    &_index {
+      @media (min-resolution: 2dppx) {
+        height: 518px;
+      }
+    }
+  }
+
+  .welcome__img {
+    width: 460px;
   }
 }
 
@@ -65,6 +80,16 @@
       background-image: url("../img/intro-triangle-desktop.svg");
       background-size: 1200px 49px;
       background-position-x: 0;
+    }
+
+    @media (min-resolution: 2dppx) {
+      height: 301px;
+    }
+
+    &_index {
+      @media (min-resolution: 2dppx) {
+        height: 518px;
+      }
     }
   }
 }
