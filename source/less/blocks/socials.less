@@ -16,10 +16,23 @@
   width: 48px;
   height: 48px;
   background-color: #81b3d2;
+
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
 }
 
 .socials__icon-logo {
+  fill: #ffffff;
   transform: translateY(17px);
+}
+
+.socials__icon-link:active > .socials__icon-logo {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 768px) {
