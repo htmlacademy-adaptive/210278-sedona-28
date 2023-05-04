@@ -1390,6 +1390,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 @media (min-width: 1200px) {
   .welcome {
     background-image: url("../img/background-sedona-desktop.jpg");
+    height: 518px;
   }
   .welcome::before {
     background-image: url("../img/intro-triangle-desktop.svg");
@@ -1399,6 +1400,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   .welcome_catalog,
   .welcome_form {
     background-position-y: -218px;
+    height: 301px;
   }
   .welcome__img_catalog,
   .welcome__img_form {
@@ -1480,12 +1482,12 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   margin: auto;
 }
 .modal__title {
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 700;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 .modal__text {
   color: #333333;
@@ -1495,7 +1497,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 }
 .modal__text_sent {
   width: 245px;
-  margin: 0 auto 18px auto;
+  margin: 0 auto 22px auto;
 }
 .modal__button-wrapper {
   background-color: #f2f2f2;
@@ -1539,20 +1541,21 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     font-size: 30px;
     line-height: 40px;
     width: 250px;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 23px auto;
   }
   .modal__title_sent {
     width: auto;
+    margin-bottom: 22px;
   }
   .modal__text {
-    margin-bottom: 43px;
+    margin-bottom: 47px;
   }
   .modal__text_sent {
     width: 421px;
-    margin: 0 auto 17px auto;
+    margin: 0 auto 20px auto;
   }
   .modal__button-wrapper {
-    padding: 44px 91px;
+    padding: 45px 91px;
   }
   .modal__button {
     font-size: 21px;
