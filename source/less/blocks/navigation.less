@@ -1,5 +1,7 @@
 .navigation {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
 }
 
 .navigation__items_opened > .navigation__list {
@@ -36,6 +38,22 @@
   &_closed {
     background: url("../img/icon-menu.svg") no-repeat 50% 50%;
     background-size: 23px 22px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -55,10 +73,31 @@
   background-color: #81b3d2;
   min-height: 55px;
   height: 55px;
-}
+  order: 50;
 
-.navigation__list:nth-child(1) {
-  border-top: none;
+  &:hover {
+    background-color: #669ec0;
+  }
+
+  &:active {
+    background-color: #5496bd;
+  }
+
+  &:nth-child(1) {
+    border-top: none;
+  }
+
+  &:nth-last-child(2) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to top, #678fa8 0, transparent 5px);
+    }
+  }
 }
 
 .navigation__link {
@@ -67,6 +106,10 @@
   line-height: 26px;
   text-decoration: none;
   color: #ffffff;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: 768px) {
@@ -79,14 +122,38 @@
     z-index: 2;
   }
 
+  .navigation__list:nth-child(-n+4) {
+    margin-top: 0;
+  }
+
   .navigation__items {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .navigation__list {
     width: 20%;
     border: none;
     background-color: #ffffff;
+    margin-top: 28px;
+
+    &:nth-child(-n+5) {
+      margin-top: 0;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      background-color: transparent;
+    }
+
+    &:nth-last-child(2) {
+      &::after {
+        display: none;
+      }
+    }
   }
 
   .navigation__list:nth-child(1) {
@@ -113,13 +180,45 @@
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+    margin-right: 2px;
+    margin-left: 2px;
 
     img {
-      transform: translateX(-12px);
+      transform: translateX(-18px);
+    }
+
+    &:hover {
+      color: #81b3d2;
+    }
+
+    &_active {
+      color: #766357;
+    }
+
+    &_catalog-logo {
+      img {
+        transform: translateX(-15px);
+      }
     }
   }
 
   .navigation__button {
     display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navigation__link {
+    &_catalog-logo {
+      img {
+        transform: translateX(0);
+      }
+    }
+
+    &_logo {
+      img {
+        transform: translateX(-3px);
+      }
+    }
   }
 }

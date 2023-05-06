@@ -1,0 +1,58 @@
+.map {
+  position: relative;
+  margin-bottom: 10px;
+
+  picture {
+    img {
+      vertical-align: bottom;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+    top: 160px;
+    left: 148px;
+    width: 27px;
+    height: 27px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #81b3d3;
+    top: 165px;
+    right: 150px;
+    width: 16.8px;
+    height: 16.8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .map {
+    margin-bottom: 5px;
+
+    &::before {
+      left: 371px;
+    }
+
+    &::after {
+      right: 375px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .map {
+    &::before {
+      left: 587px;
+    }
+
+    &::after {
+      right: 591px;
+    }
+  }
+}

@@ -5,19 +5,20 @@
 }
 
 .advantages-service {
-  padding-bottom: 60px;
+  margin-bottom: 42px;
 }
 
 .advantages-service__block {
   position: relative;
-  padding-left: 60px;
+  padding-left: 64px;
+  margin-top: 33px;
 
   &::before {
     content: "";
     position: absolute;
-    width: 35px;
-    top: 27px;
-    left: 11px;
+    width: 40px;
+    top: -8px;
+    left: 19px;
   }
 
   &_house-icon {
@@ -35,19 +36,27 @@
   &_souvenir-icon {
     &::before {
       content: url("../img/icon-gift.svg");
+      width: 33px;
+      left: 21px;
     }
   }
 }
 
 .advantages-service__title {
-  font-size: 21px;
-  margin-top: 33px;
-  margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 .advantages-service__descript {
   color: #333333;
+  width: 237px;
   margin: 0;
+}
+
+.advantages-service__line {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -55,6 +64,7 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-bottom: 60px;
   }
 
   .advantages-service__block {
@@ -64,37 +74,65 @@
     width: 256px;
     padding-top: 98px;
     padding-left: 0;
+    margin-top: 56px;
 
     &::before {
-      width: 70px;
-      top: 40px;
-      left: 92px;
+      width: 77px;
+      top: 3px;
+      left: 88px;
     }
 
     &_souvenir-icon {
       &::before {
         content: url("../img/icon-gift.svg");
-        top: 20px;
+        width: 70px;
+        left: 95px;
       }
     }
+  }
+
+  .advantages-service__title {
+    font-size: 21px;
+    margin-bottom: 25px;
   }
 
   .advantages-service__descript {
     text-align: center;
     width: 190px;
+
+    &_second {
+      width: 155px;
+    }
   }
 }
 
 @media (min-width: 1200px) {
+  .advantages-service {
+    margin-bottom: 66px;
+  }
+
   .advantages-service__block {
     width: 400px;
+    margin-top: 69px;
 
     &::before {
-      left: 165px;
+      top: 2px;
+      left: 160px;
+    }
+
+    &_souvenir-icon {
+      &::before {
+        top: -4px;
+        left: 163px;
+      }
     }
   }
 
   .advantages-service__descript {
     width: 290px;
+  }
+
+  .advantages-service__line {
+    display: block;
   }
 }

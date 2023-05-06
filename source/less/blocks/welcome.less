@@ -11,6 +11,15 @@
     background-image: url("../img/background-sedona-mobile@2x.jpg");
   }
 
+  &_catalog,
+  &_form {
+    background-position-y: -230px;
+  }
+
+  &_form {
+    height: 158px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -31,14 +40,15 @@
     position: absolute;
     display: block;
     width: 100%;
-    bottom: -248px;
+    bottom: -260px;
     left: 0;
     height: 145px;
     background-image: url("../img/white-copy.svg");
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: 352px 49px;
+    background-size: 352px 35px;
     background-position-x: -16px;
+    transform: translateY(-21px);
     z-index: 1;
   }
 }
@@ -46,8 +56,17 @@
 .welcome__img {
   display: block;
   margin: 0 auto;
-  padding-top: 90px;
+  padding-top: 87px;
   padding-bottom: 90px;
+
+  &_catalog {
+    padding-top: 49px;
+    padding-bottom: 70px;
+  }
+
+  &_form {
+    padding-top: 52px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -55,7 +74,7 @@
     background-image: url("../img/background-sedona-tablet.jpg");
 
     &::before {
-      background-size: 778px 49px;
+      background-size: 778px 63px;
       background-position-x: -5px;
     }
 
@@ -77,16 +96,23 @@
 
   .welcome__img {
     width: 460px;
+    padding-top: 74px;
+
+    &_catalog,
+    &_form {
+      padding-top: 92px;
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .welcome {
     background-image: url("../img/background-sedona-desktop.jpg");
+    height: 518px;
 
     &::before {
       background-image: url("../img/intro-triangle-desktop.svg");
-      background-size: 1200px 49px;
+      background-size: 1200px 57px;
       background-position-x: 0;
     }
 
@@ -99,6 +125,19 @@
       @media (min-resolution: 2dppx) {
         height: 518px;
       }
+    }
+
+    &_catalog,
+    &_form {
+      background-position-y: -218px;
+      height: 301px;
+    }
+  }
+
+  .welcome__img {
+    &_catalog,
+    &_form {
+      padding-top: 100px;
     }
   }
 }
