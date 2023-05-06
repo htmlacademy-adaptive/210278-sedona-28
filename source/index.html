@@ -11,9 +11,25 @@
   <body>
     <div class="container">
       <header>
-        <nav class="navigation">
-          <button class="navigation__button" type="button"></button>
-          <ul class="navigation__items navigation__items_opened">
+        <!--
+          Если загрузка без js:
+          navigation_nojs
+          navigation__button_nojs
+          navigation__items_nojs
+
+          Открытое меню c js:
+          navigation
+          navigation__button_opened
+          navigation__items_opened
+
+          Закрытое меню с js:
+          navigation
+          navigation__button_closed
+          navigation__items_closed
+        -->
+        <nav class="navigation navigation_nojs">
+          <button class="navigation__button navigation__button_nojs" type="button"></button>
+          <ul class="navigation__items navigation__items_nojs">
             <li class="navigation__list">
               <a href="#" class="navigation__link navigation__link_active">Главная</a>
             </li>
