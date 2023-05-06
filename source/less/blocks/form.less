@@ -160,6 +160,8 @@ input.form__input-radio[type="radio"]:checked + .form__label_radio::before {
 input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::before {
   content: url("../img/tick-icon.svg");
   font-size: 8px;
+  display: flex;
+  justify-content: center;
 }
 
 input.form__input-radio[type="radio"]:focus + .form__label_radio::before,
@@ -284,10 +286,10 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
         position: absolute;
         content: "";
         display: block;
-        top: -10%;
+        top: -11%;
         right: -33px;
         width: 1px;
-        height: 407px;
+        height: 338px;
         background: #dbdbdb;
       }
     }
@@ -458,7 +460,6 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 
       &::after {
         right: -50px;
-        height: 393px;
       }
     }
 
@@ -474,12 +475,12 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
       margin-bottom: 15px;
 
       &::before {
-        right: 0;
+        right: -20px;
         width: 280px;
       }
 
       &::after {
-        left: 0;
+        left: -20px;
         width: 280px;
       }
     }
@@ -490,12 +491,14 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
       margin-bottom: 45px;
 
       &::before {
-        right: -2px;
+        top: -75px;
+        right: -13px;
         width: 280px;
       }
 
       &::after {
-        left: -2px;
+        top: -75px;
+        left: -13px;
         width: 280px;
       }
     }
@@ -505,12 +508,14 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
       margin: 0 auto 40px auto;
 
       &::before {
-        right: -98px;
+        top: -45px;
+        right: -96px;
         width: 280px;
       }
 
       &::after {
-        left: -98px;
+        top: -45px;
+        left: -96px;
         width: 280px;
       }
     }
@@ -546,7 +551,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 
   .form__submit {
     width: 768px;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 67px auto;
   }
 
   .form__button {

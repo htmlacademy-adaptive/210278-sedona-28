@@ -73,6 +73,7 @@
   background-color: #81b3d2;
   min-height: 55px;
   height: 55px;
+  order: 50;
 
   &:hover {
     background-color: #669ec0;
@@ -121,14 +122,24 @@
     z-index: 2;
   }
 
+  .navigation__list:nth-child(-n+4) {
+    margin-top: 0;
+  }
+
   .navigation__items {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .navigation__list {
     width: 20%;
     border: none;
     background-color: #ffffff;
+    margin-top: 28px;
+
+    &:nth-child(-n+5) {
+      margin-top: 0;
+    }
 
     &:hover {
       background-color: transparent;
@@ -169,6 +180,8 @@
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+    margin-right: 2px;
+    margin-left: 2px;
 
     img {
       transform: translateX(-18px);
