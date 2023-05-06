@@ -132,7 +132,7 @@ body {
     padding: 15px 0 23px;
   }
   .advantage__text_fourth {
-    width: 157px;
+    width: 160px;
   }
 }
 @media (min-width: 1200px) {
@@ -340,6 +340,8 @@ input.form__input-radio[type="radio"]:checked + .form__label_radio::before {
 input.form__input-checkbox[type="checkbox"]:checked + .form__label_checkbox::before {
   content: url("../img/tick-icon.svg");
   font-size: 8px;
+  display: flex;
+  justify-content: center;
 }
 input.form__input-radio[type="radio"]:focus + .form__label_radio::before,
 input.form__input-radio[type="radio"]:active + .form__label_radio::before {
@@ -443,10 +445,10 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     position: absolute;
     content: "";
     display: block;
-    top: -10%;
+    top: -11%;
     right: -33px;
     width: 1px;
-    height: 407px;
+    height: 338px;
     background: #dbdbdb;
   }
   .form__item_radio,
@@ -588,7 +590,6 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   }
   .form__item_user::after {
     right: -50px;
-    height: 393px;
   }
   .form__item_radio,
   .form__item_checkbox {
@@ -601,11 +602,11 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     margin-bottom: 15px;
   }
   .form__item_radio::before {
-    right: 0;
+    right: -20px;
     width: 280px;
   }
   .form__item_radio::after {
-    left: 0;
+    left: -20px;
     width: 280px;
   }
   .form__item_checkbox {
@@ -614,11 +615,13 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     margin-bottom: 45px;
   }
   .form__item_checkbox::before {
-    right: -2px;
+    top: -75px;
+    right: -13px;
     width: 280px;
   }
   .form__item_checkbox::after {
-    left: -2px;
+    top: -75px;
+    left: -13px;
     width: 280px;
   }
   .form__item_review {
@@ -626,11 +629,13 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     margin: 0 auto 40px auto;
   }
   .form__item_review::before {
-    right: -98px;
+    top: -45px;
+    right: -96px;
     width: 280px;
   }
   .form__item_review::after {
-    left: -98px;
+    top: -45px;
+    left: -96px;
     width: 280px;
   }
   .form__item_checkbox > .form__title {
@@ -655,7 +660,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   }
   .form__submit {
     width: 768px;
-    margin: 0 auto 70px auto;
+    margin: 0 auto 67px auto;
   }
   .form__button {
     width: 384px;
@@ -667,12 +672,12 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   flex-direction: column;
 }
 .advantages-service {
-  margin-bottom: 47px;
+  margin-bottom: 42px;
 }
 .advantages-service__block {
   position: relative;
   padding-left: 64px;
-  margin-top: 37px;
+  margin-top: 33px;
 }
 .advantages-service__block::before {
   content: "";
@@ -693,7 +698,8 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   left: 21px;
 }
 .advantages-service__title {
-  font-size: 21px;
+  font-size: 18px;
+  line-height: 26px;
   margin-top: 0;
   margin-bottom: 18px;
 }
@@ -707,7 +713,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 62px;
+    margin-bottom: 60px;
   }
   .advantages-service__block {
     display: flex;
@@ -716,7 +722,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     width: 256px;
     padding-top: 98px;
     padding-left: 0;
-    margin-top: 58px;
+    margin-top: 56px;
   }
   .advantages-service__block::before {
     width: 77px;
@@ -729,6 +735,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     left: 95px;
   }
   .advantages-service__title {
+    font-size: 21px;
     margin-bottom: 25px;
   }
   .advantages-service__descript {
@@ -741,7 +748,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 }
 @media (min-width: 1200px) {
   .advantages-service {
-    margin-bottom: 71px;
+    margin-bottom: 66px;
   }
   .advantages-service__block {
     width: 400px;
@@ -758,6 +765,9 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   .advantages-service__descript {
     width: 290px;
   }
+  .advantages-service__descript_souvenir {
+    width: 200px;
+  }
 }
 .catalog__items {
   display: flex;
@@ -769,6 +779,8 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 .catalog__item {
   display: flex;
   flex-direction: column;
+  color: #000000;
+  text-decoration: none;
   padding-top: 24px;
   padding-right: 20px;
   padding-left: 20px;
@@ -782,8 +794,9 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 .catalog__title {
   font-size: 14px;
   font-weight: 700;
+  color: #000000;
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 .catalog__author {
   font-size: 14px;
@@ -937,6 +950,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 @media (min-width: 1200px) {
   .footer__wrapper {
     justify-content: space-between;
+    padding-top: 29px;
     padding-right: 120px;
     padding-left: 120px;
   }
@@ -1004,6 +1018,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   background-color: #81b3d2;
   min-height: 55px;
   height: 55px;
+  order: 50;
 }
 .navigation__list:hover {
   background-color: #669ec0;
@@ -1041,13 +1056,21 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     display: block;
     z-index: 2;
   }
+  .navigation__list:nth-child(-n+4) {
+    margin-top: 0;
+  }
   .navigation__items {
     display: flex;
+    flex-wrap: wrap;
   }
   .navigation__list {
     width: 20%;
     border: none;
     background-color: #ffffff;
+    margin-top: 28px;
+  }
+  .navigation__list:nth-child(-n+5) {
+    margin-top: 0;
   }
   .navigation__list:hover {
     background-color: transparent;
@@ -1077,6 +1100,8 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
     font-size: 14px;
     line-height: 21px;
     color: #000000;
+    margin-right: 2px;
+    margin-left: 2px;
   }
   .navigation__link img {
     transform: translateX(-18px);
@@ -1110,6 +1135,9 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   padding-left: 25px;
   padding-bottom: 32px;
 }
+.promo_index {
+  padding-top: 32px;
+}
 .promo_index-tablet {
   padding-bottom: 41px;
 }
@@ -1135,6 +1163,9 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   max-width: 284px;
   align-self: center;
   margin-bottom: 30px;
+}
+.promo__title_index {
+  margin-bottom: 33px;
 }
 .promo__descript {
   line-height: 21px;
@@ -1260,6 +1291,9 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   padding-right: 20px;
   padding-left: 20px;
 }
+.video__img {
+  vertical-align: bottom;
+}
 .video__play {
   position: absolute;
   border: none;
@@ -1338,7 +1372,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
   background-image: url("../img/white-copy.svg");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 352px 44px;
+  background-size: 352px 35px;
   background-position-x: -16px;
   transform: translateY(-21px);
   z-index: 1;
@@ -1423,6 +1457,7 @@ input.form__input-checkbox[type="checkbox"]:active + .form__label_checkbox::befo
 }
 .socials {
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 30px;
