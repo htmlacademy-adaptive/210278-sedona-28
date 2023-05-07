@@ -72,10 +72,13 @@
 @media (min-width: 768px) {
   .welcome {
     background-image: url("../img/background-sedona-tablet.jpg");
+    height: 288px;
+    margin-bottom: 2px;
 
     &::before {
-      background-size: 778px 63px;
+      background-size: 778px 57px;
       background-position-x: -5px;
+      background-position-y: 88px;
     }
 
     &::after {
@@ -84,7 +87,8 @@
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background-sedona-tablet@2x.jpg");
-      height: 290px;
+      height: 288px;
+      margin-bottom: 2px;
     }
 
     &_index {
