@@ -14,6 +14,10 @@
     background-color: #eeeeee;
     padding: 24px 37px;
   }
+
+  &_border-none {
+    padding-top: 24px;
+  }
 }
 
 .advantage__title {
@@ -22,7 +26,7 @@
   margin: 0;
 }
 
-.advantage__border .advantage__title {
+.advantage_border .advantage__title {
   &::before {
     position: absolute;
     content: "";
@@ -35,13 +39,7 @@
   }
 }
 
-.advantage__border {
-  &_none {
-    padding-top: 24px;
-  }
-}
-
-.advantage__border_none .advantage__title {
+.advantage_border-none .advantage__title {
   &::before {
     display: none;
   }
@@ -82,11 +80,11 @@
     width: 150px;
 
     &_second {
-      width: 150px;
+      width: 150.5px;
     }
   }
 
-  .advantage__border .advantage__title {
+  .advantage_border .advantage__title {
     &::before {
       display: none;
     }
