@@ -18,7 +18,7 @@
   background-color: #ffffff;
 }
 
-.navigation__items_nojs > .navigation__list {
+.navigation__items_nojs > .navigation__list_logo {
   border: none;
 }
 
@@ -95,7 +95,6 @@
   border-bottom: 1px solid #678fa8;
   background-color: #81b3d2;
   min-height: 55px;
-  height: 55px;
   order: 50;
 
   &:hover {
@@ -120,6 +119,10 @@
       height: 20px;
       background: linear-gradient(to top, #678fa8 0, transparent 5px);
     }
+  }
+
+  &_logo {
+    max-height: 55px;
   }
 }
 
@@ -156,10 +159,6 @@
     left: 0;
   }
 
-  .navigation__list:nth-child(-n+4) {
-    margin-top: 0;
-  }
-
   .navigation__items {
     display: flex;
     flex-wrap: wrap;
@@ -171,7 +170,8 @@
     background-color: #ffffff;
     margin-top: 28px;
 
-    &:nth-child(-n+5) {
+    &:nth-child(-n+4),
+    &_logo {
       margin-top: 0;
     }
 
@@ -206,7 +206,7 @@
     order: 5;
   }
 
-  .navigation__list:nth-child(5) {
+  .navigation__list_logo {
     order: 3;
   }
 

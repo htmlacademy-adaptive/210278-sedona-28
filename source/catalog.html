@@ -13,9 +13,9 @@
   <body>
     <div class="container">
       <header>
-        <nav class="navigation">
-          <button class="navigation__button" type="button"></button>
-          <ul class="navigation__items navigation__items_opened">
+        <nav class="navigation navigation_nojs">
+          <button class="navigation__button navigation__button_nojs" type="button"></button>
+          <ul class="navigation__items navigation__items_nojs">
             <li class="navigation__list">
               <a href="index.html" class="navigation__link">Главная</a>
             </li>
@@ -48,6 +48,9 @@
           <div class="catalog__items">
             <a class="catalog__item" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x" width="1200">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x" width="648" height="400">
+                <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x" width="280" height="280">
                 <source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x" width="1200" height="400">
                 <source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x" width="648" height="400">
                 <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
@@ -67,6 +70,9 @@
             </a>
             <a class="catalog__item" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x" width="400">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x" width="324" height="267">
+                <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x" width="280">
                 <source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x" width="400" height="267">
                 <source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x" width="324" height="267">
                 <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" alt="Фото достопримечательностей">
@@ -86,6 +92,9 @@
             </a>
             <a class="catalog__item" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x" width="400">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x" width="324" height="267">
+                <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x" width="280">
                 <source media="(min-width:1200px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x" width="400" height="267">
                 <source media="(min-width:768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x" width="324" height="267">
                 <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
@@ -105,6 +114,9 @@
             </a>
             <a class="catalog__item" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-4-desktop.webp 1x, img/photo-4-desktop@2x.webp 2x" width="400">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-4-tablet.webp 1x, img/photo-4-tablet@2x.webp 2x" width="324" height="267">
+                <source type="image/webp" srcset="img/photo-4-mobile.webp 1x, img/photo-4-mobile@2x.webp 2x" width="280">
                 <source media="(min-width:1200px)" srcset="img/photo-4-desktop.jpg 1x, img/photo-4-desktop@2x.jpg 2x" width="400" height="267">
                 <source media="(min-width:768px)" srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x" width="324" height="267">
                 <img src="img/photo-4-mobile.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Фото достопримечательностей">
@@ -131,6 +143,9 @@
           </div>
           <div class="video">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x" width="800">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x" width="648" height="500">
+                <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x" width="280" height="177">
               <source media="(min-width:1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" width="800" height="500">
               <source media="(min-width:768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x" width="648" height="500">
               <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видео Седоны">
@@ -166,7 +181,7 @@
             </li>
           </ul>
           <div class="footer__block">
-            <a href="https://htmlacademy.ru" class="footer__copyright-link" aria-label="Сайт html academy">
+            <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__copyright-link" aria-label="Сайт html academy">
               <p class="footer__copyright">Разработано</p>
               <svg class="footer__academy-logo" width="27" height="35">
                 <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
